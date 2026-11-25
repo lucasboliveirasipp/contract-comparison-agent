@@ -1,0 +1,439 @@
+Estilo personalizado para o LexMatch
+
+/* Cor principal do tema */
+:root {
+    --primary-color: #1E3A8A;
+    --secondary-color: #115E59;
+    --light-color: #14B8A6;
+    --dark-red: #6B1E2A;
+    --background-light: #F5F5F5;
+    --text-dark: #2C2C2C;
+}
+
+/* Estilo para o cabeçalho principal */
+/* .main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+} */
+
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+/* Garantir centralização perfeita */
+.main-header {
+    position: relative;
+}
+
+.main-header::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Estilo para a imagem do logo */
+.logo-image {
+    max-height: 60px;
+    max-width: 300px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+
+/* Estilo para caixas de informação */
+.info-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    margin: 1rem 0;
+    border-left: 5px solid var(--light-color);
+}
+
+/* Estilo para botões principais */
+.stButton > button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--light-color)) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Estilo para métricas */
+.metric-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+}
+
+/* Estilo para abas */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: var(--background-light);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilo para upload de arquivos */
+.uploadedFile {
+    background: linear-gradient(135deg, var(--background-light), white);
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Estilo para alertas de sucesso */
+.stAlert[data-baseweb="notification"] {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
+
+/* Estilo personalizado para chat messages */
+.chat-message-user {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.chat-message-assistant {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para sidebar */
+.css-1d391kg {
+    background-color: var(--background-light);
+}
+
+/* Estilo para containers de análise */
+.analysis-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.analysis-container h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo para expandir seções */
+.streamlit-expanderHeader {
+    background-color: var(--background-light);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .info-box {
+        padding: 0.75rem;
+    }
+}
+
+
+/*===================================*/
+
+/* Estilo personalizado para o LexMatch */
+
+/* Cor principal do tema */
+:root {
+    --primary-color: #1E3A8A;
+    --secondary-color: #115E59;
+    --light-color: #14B8A6;
+    --dark-red: #6B1E2A;
+    --background-light: #F5F5F5;
+    --text-dark: #2C2C2C;
+}
+
+/* Estilo para o cabeçalho principal */
+.main-header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1.5rem;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 80px;
+}
+
+.main-header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    position: relative;
+    left: 0;
+    right: 0;
+}
+
+/* Garantir centralização perfeita */
+.main-header {
+    position: relative;
+}
+
+.main-header::before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+/* Estilo para a imagem do logo */
+.logo-image {
+    max-height: 60px;
+    max-width: 300px;
+    height: auto;
+    width: auto;
+    object-fit: contain;
+    filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Estilo para caixas de informação */
+.info-box {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    padding: 1rem;
+    border-radius: 8px;
+    color: white;
+    margin: 1rem 0;
+    border-left: 5px solid var(--light-color);
+}
+
+/* Estilo para botões principais - APENAS no container do LexMatch */
+.lexmatch-agent-container .stButton > button {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color)) !important;
+    color: white !important;
+    border: none !important;
+    border-radius: 8px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+}
+
+.lexmatch-agent-container .stButton > button:hover {
+    background: linear-gradient(135deg, var(--secondary-color), var(--light-color)) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Proteger o sidebar dos estilos */
+[data-testid="stSidebar"] .stButton > button,
+[data-testid="stSidebar"] button,
+.stSidebar .stButton > button {
+    background: var(--background-light) !important;
+    color: var(--text-dark) !important;
+    border: 1px solid #e0e0e0 !important;
+    border-radius: 4px !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: normal !important;
+    transition: background-color 0.2s ease !important;
+    box-shadow: none !important;
+}
+
+[data-testid="stSidebar"] .stButton > button:hover,
+[data-testid="stSidebar"] button:hover,
+.stSidebar .stButton > button:hover {
+    background: #f0f0f0 !important;
+    transform: none !important;
+    box-shadow: none !important;
+    color: var(--text-dark) !important;
+}
+
+/* Proteger dropdowns e outros elementos do sidebar */
+[data-testid="stSidebar"] select,
+[data-testid="stSidebar"] .stSelectbox > div > div {
+    background: white !important;
+    color: var(--text-dark) !important;
+    border: 1px solid #e0e0e0 !important;
+}
+
+/* Estilo para métricas */
+.metric-container {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0.5rem 0;
+}
+
+/* Estilo para abas */
+.stTabs [data-baseweb="tab-list"] {
+    gap: 8px;
+}
+
+.stTabs [data-baseweb="tab"] {
+    background-color: var(--background-light);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Estilo para upload de arquivos */
+.uploadedFile {
+    background: linear-gradient(135deg, var(--background-light), white);
+    border: 2px dashed var(--primary-color);
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+/* Estilo para alertas de sucesso */
+.stAlert[data-baseweb="notification"] {
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 8px;
+}
+
+/* Estilo personalizado para chat messages */
+.chat-message-user {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    border-left: 4px solid var(--primary-color);
+}
+
+.chat-message-assistant {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 10px;
+    margin: 0.5rem 0;
+    border-left: 4px solid var(--secondary-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo para sidebar */
+.css-1d391kg {
+    background-color: var(--background-light);
+}
+
+/* Estilo para containers de análise */
+.analysis-container {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+}
+
+.analysis-container h3 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.5rem;
+}
+
+/* Estilo para expandir seções */
+.streamlit-expanderHeader {
+    background-color: var(--background-light);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .main-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .info-box {
+        padding: 0.75rem;
+    }
+}
+
+
